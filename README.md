@@ -17,7 +17,8 @@ The openAI tutorials don't make fighting this uphill battle of setting practical
 #### Even with temperature equals 1.0, the Json output is dependent on prompts; therefore, any parsing of the output is impossible. The only solution is to inject the format of the expected Json in the prompt itself which at that point, just give me a database
 #### Any developer approaching this task without understanding LLMs is likely to be surprised and challenged to debug the results they get. For example, try entering 'west' as the region ... the output starts with 'coast' and then proceeds to list some colleges. Why? How would you handled this case. Invariably, you'd end up forcing the user to select from catagegorial inputs which would defeat the whole purpose of chat interfaces. 
 
-Anyway, I could go on forever on the risks and challenges. I hope this simple application may be useful to some engineers or managers out there stuck in the trenches of defending their time and budgets against the 'just use GPT' and help to push the focus onto those capabilities an LLM may offer that are unique and those which are best left to other tech.
+## Summary
+I hope this simple application may be useful to some engineers or managers out there stuck in the trenches of defending their time and budgets against the 'just use GPT' and help to push the focus onto those capabilities an LLM may offer that are unique and those which are best left to other tech.
 
 
 ## Setup
