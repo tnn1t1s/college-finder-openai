@@ -11,7 +11,7 @@ The openAI tutorials don't make fighting this uphill battle of setting practical
 ### Risks
 #### Without extremely serious input and output validation, applications are vulnerable to prompt injections, that is, a malicious (or just naive) user could insert a prompt that would cause bad things to happen
 #### Without serious attempts to throttle API traffic, every application is vulnerable to brain dead simple DDOS attacks
-#### The results are terrible and could be misleading to the point of being a liability, for example, try entering a 2.5 GPA with a 28 ACT score in the north east; you may be surprised to find Yale in the list of returned results. 
+#### The results returned by the API can be misleading to the point of being a liability, for example, try entering a 2.5 GPA with a 28 ACT score in the north east; you may be surprised to find Yale in the list of returned results. 
 
 ### Challenges
 #### Even with temperature equals 1.0, the Json output is dependent on prompts; therefore, any parsing of the output is impossible. The only solution is to inject the format of the expected Json in the prompt itself which at that point, just give me a database
