@@ -15,20 +15,14 @@ export default async function (req, res) {
     return;
   }
 
-  const animal = req.body.animal || '';
-  if (animal.trim().length === 0) {
-    res.status(400).json({
-      error: {
-        message: "Please enter a valid description",
-      }
-    });
-    return;
-  }
+  const gpa = req.body.gpa
+  const act = req.body.act
+  const region = req.body.region
 
   try {
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: generatePrompt(animal),
+      prompt: generatePrompt(gpa, act, region),
       temperature: 1.0,
       max_tokens: 256,
       top_p: 1,
@@ -52,6 +46,6 @@ export default async function (req, res) {
   }
 }
 
-function generatePrompt(animal) {
-  return `suggest five colleges based on my act score of 30 and my unweighted GPA of 3.5 in the ${animal} and format the output in html`;
+function generatePrompt(gpa, act, region) {
+  return `suggest five colleges in the ${region} of the United States based on my act score of ${act} and my GPA of ${gpa} and format the output in json`;
 }

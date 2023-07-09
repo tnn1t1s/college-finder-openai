@@ -3,7 +3,9 @@ import { useState } from "react";
 import styles from "./index.module.css";
 
 export default function Home() {
-  const [animalInput, setAnimalInput] = useState("");
+  const [gpaInput, setGpaInput] = useState("");
+  const [actInput, setActInput] = useState("");
+  const [regionInput, setRegionInput] = useState("");
   const [result, setResult] = useState();
 
   async function onSubmit(event) {
@@ -14,7 +16,7 @@ export default function Home() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ animal: animalInput }),
+        body: JSON.stringify({ gpa: gpaInput, act: actInput, region: regionInput }),
       });
 
       const data = await response.json();
@@ -23,7 +25,9 @@ export default function Home() {
       }
 
       setResult(data.result);
-      setAnimalInput("");
+      setGpaInput("");
+      setActInput("");
+      setRegionInput("");
     } catch(error) {
       // Consider implementing your own error handling logic here
       console.error(error);
@@ -42,13 +46,9 @@ export default function Home() {
         <img src="/college.png" className={styles.icon} />
         <h3>Find My College</h3>
         <form onSubmit={onSubmit}>
-          <input
-            type="text"
-            name="animal"
-            placeholder="Enter a region"
-            value={animalInput}
-            onChange={(e) => setAnimalInput(e.target.value)}
-          />
+          <input type="text" name="gpa" placeholder="Enter a GPA" value={gpaInput} onChange={(e) => setGpaInput(e.target.value)} />
+          <input type="text" name="act" placeholder="Enter an ACT score" value={actInput} onChange={(e) => setActInput(e.target.value)} />
+          <input type="text" name="region" placeholder="Enter a Region" value={regionInput} onChange={(e) => setRegionInput(e.target.value)} />
           <input type="submit" value="Get my Colleges .." />
         </form>
         <div className={styles.result}>{result}</div>
