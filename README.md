@@ -1,4 +1,4 @@
-# OpenAI API Quickstart - Build a College Finder Web Application
+# OpenAI API FalseStart - Build a College Finder Web Application
 
 This is an example applications that makes naive use of the openAI chat APIs to create a college finder web application.. It uses the [Next.js](https://nextjs.org/) framework with [React](https://reactjs.org/). Check out the tutorial or follow the instructions below to get set up.
 
