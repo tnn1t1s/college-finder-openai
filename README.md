@@ -4,9 +4,9 @@ This is an example applications that makes naive use of the openAI chat APIs to 
 
 ## Commentary
 
-The emergence of foundational models into the mainstream public presents a unique challenge for software engineers tasked with building web applications; on Tik Tok, Reels and Youttube, there are thousands of tutorials suggesting the 'end is here' for classical web application development methodologies with LLMs being a tectonic shift in the modus operandi. For those of us building things, or managing folks who are building things, this can be deeply frustrating as it feels wholely disjoint the the realities and practicalities we facer on a daily basis. 
+The emergence of foundational models into the mainstream public presents a unique challenge for software engineers tasked with building web applications. On Tik Tok, Reels and Youttube, there are thousands of tutorials suggesting the 'end is here' for classical web application development methodologies with LLMs being a tectonic shift in the modus operandi. For those of us building things, or managing folks who are building things, this can be deeply frustrating as it feels wildly disjoint from the realities and practicalities we facer on a daily basis. 
 
-The openAI tutorials don't make fighting this uphill battle of setting practical expectations any easier; the tutorial this demo is taken from suggests buiding a new application can be as easy as cobbling together a prompt and doing, well, *something* with the output. Like anything else, the gross oversimplification of the tutorial mask the complexity and serious risks introduced by the openAI APIs. 
+The openAI tutorials don't make fighting this uphill battle of setting practical expectations any easier; the tutorial this demo is taken from suggests buiding a new application can be as easy as cobbling together a prompt and doing, well, *something* with the output. Like anything else, the gross oversimplification of the tutorial masks the complexity and serious risks introduced by naive use of the openAI APIs. 
 
 ### Risks
 #### Without extremely serious input and output validation, applications are vulnerable to prompt injections, that is, a malicious (or just naive) user could insert a prompt that would cause bad things to happen
